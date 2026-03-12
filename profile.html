@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: white;
+            padding-bottom: 80px;
+        }
+        .profile-header {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+            margin: 0 auto 15px;
+        }
+        .user-id {
+            color: #888;
+            font-size: 14px;
+        }
+        .btn {
+            display: block;
+            margin: 10px 20px;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+        }
+        .tabs {
+            display: flex;
+            margin: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 25px;
+            padding: 5px;
+        }
+        .tab {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        .tab.active {
+            background: #667eea;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #888;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(26, 26, 46, 0.95);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            color: #888;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .nav-item.active { color: #667eea; }
+        .nav-icon { font-size: 24px; }
+    </style>
+</head>
+<body>
+    <div class="profile-header">
+        <div class="avatar"></div>
+        <div class="user-id">ID: 7732316848 📋</div>
+    </div>
+    
+    <a href="#" class="btn">⭐ Пополнить баланс</a>
+    <a href="#" class="btn">💬 Заработать с Патриком</a>
+    <a href="#" class="btn">🎫 Ввести промокод</a>
+    
+    <div class="tabs">
+        <div class="tab active">🎒 Инвентарь</div>
+        <div class="tab">📋 История выводов</div>
+    </div>
+    
+    <div class="empty-state">
+        Предметов пока нет, но ты можешь это исправить!<br>
+        Взгляни на эти кейсы:
+    </div>
+    
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🎁</span>
+            <span>Кейсы</span>
+        </a>
+        <a href="games.html" class="nav-item">
+            <span class="nav-icon">🎮</span>
+            <span>Мини-игры</span>
+        </a>
+        <a href="rating.html" class="nav-item">
+            <span class="nav-icon">🏆</span>
+            <span>Рейтинг</span>
+        </a>
+        <a href="profile.html" class="nav-item active">
+            <span class="nav-icon">👤</span>
+            <span>Профиль</span>
+        </a>
+    </nav>
+</body>
+</html>
