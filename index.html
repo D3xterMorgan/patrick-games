@@ -1,3 +1,7 @@
+Понял, Тони! Все файлы в одной папке, без подпапки `images/`. Вот исправленный код:
+
+**index.html** (главная с кейсами):
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -12,7 +16,7 @@
             box-sizing: border-box;
             -webkit-tap-highlight-color: transparent;
         }
-
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
@@ -20,7 +24,7 @@
             color: white;
             padding-bottom: 80px;
         }
-
+        
         .header {
             display: flex;
             justify-content: space-between;
@@ -28,7 +32,7 @@
             padding: 15px 20px;
             background: rgba(0,0,0,0.2);
         }
-
+        
         .logo {
             font-size: 20px;
             font-weight: bold;
@@ -36,13 +40,13 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
+        
         .header-right {
             display: flex;
             align-items: center;
             gap: 15px;
         }
-
+        
         .balance {
             background: rgba(255,255,255,0.1);
             padding: 8px 15px;
@@ -52,18 +56,18 @@
             gap: 5px;
             font-weight: bold;
         }
-
+        
         .balance::before {
             content: "⭐";
         }
-
+        
         .user-avatar {
             width: 35px;
             height: 35px;
             border-radius: 50%;
             background: linear-gradient(45deg, #00d2ff, #3a7bd5);
         }
-
+        
         .live-bar {
             background: rgba(0,0,0,0.3);
             padding: 10px 20px;
@@ -73,19 +77,19 @@
             overflow-x: auto;
             white-space: nowrap;
         }
-
+        
         .live-indicator {
             color: #00ff00;
             font-size: 12px;
             font-weight: bold;
             animation: pulse 2s infinite;
         }
-
+        
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.5; }
         }
-
+        
         .live-item {
             display: inline-flex;
             align-items: center;
@@ -95,7 +99,7 @@
             border-radius: 15px;
             font-size: 12px;
         }
-
+        
         .banner {
             margin: 20px;
             padding: 20px;
@@ -103,30 +107,30 @@
             border-radius: 20px;
             text-align: center;
         }
-
+        
         .banner h2 {
             font-size: 24px;
             margin-bottom: 5px;
         }
-
+        
         .banner p {
             opacity: 0.9;
             font-size: 14px;
         }
-
+        
         .section-title {
             padding: 20px;
             font-size: 18px;
             font-weight: bold;
         }
-
+        
         .cases-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
             padding: 0 20px;
         }
-
+        
         .case-card {
             background: linear-gradient(135deg, #2d3561 0%, #1a1f3a 100%);
             border-radius: 20px;
@@ -136,30 +140,30 @@
             transition: all 0.3s;
             cursor: pointer;
         }
-
+        
         .case-card:hover {
             border-color: #667eea;
             transform: translateY(-5px);
         }
-
+        
         .case-image {
             width: 100%;
             height: 120px;
             object-fit: contain;
             margin-bottom: 10px;
         }
-
+        
         .case-name {
             font-size: 14px;
             font-weight: bold;
             margin-bottom: 5px;
         }
-
+        
         .case-price {
             color: #ffd700;
             font-weight: bold;
         }
-
+        
         .bottom-nav {
             position: fixed;
             bottom: 0;
@@ -172,7 +176,7 @@
             padding: 10px 0;
             border-top: 1px solid rgba(255,255,255,0.1);
         }
-
+        
         .nav-item {
             display: flex;
             flex-direction: column;
@@ -183,15 +187,15 @@
             font-size: 12px;
             transition: color 0.3s;
         }
-
+        
         .nav-item.active {
             color: #667eea;
         }
-
+        
         .nav-icon {
             font-size: 24px;
         }
-
+        
         .modal {
             display: none;
             position: fixed;
@@ -205,11 +209,11 @@
             align-items: center;
             padding: 20px;
         }
-
+        
         .modal.active {
             display: flex;
         }
-
+        
         .modal-content {
             background: linear-gradient(135deg, #2d3561 0%, #1a1f3a 100%);
             border-radius: 30px;
@@ -218,7 +222,7 @@
             max-width: 350px;
             width: 100%;
         }
-
+        
         .roulette {
             display: flex;
             gap: 10px;
@@ -228,7 +232,7 @@
             background: rgba(0,0,0,0.3);
             border-radius: 15px;
         }
-
+        
         .roulette-item {
             min-width: 80px;
             height: 80px;
@@ -239,7 +243,7 @@
             justify-content: center;
             font-size: 30px;
         }
-
+        
         .btn-primary {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -252,12 +256,12 @@
             width: 100%;
             margin-top: 20px;
         }
-
+        
         .btn-primary:disabled {
             opacity: 0.5;
             cursor: not-allowed;
         }
-
+        
         .win-screen {
             display: none;
             position: fixed;
@@ -271,23 +275,23 @@
             align-items: center;
             flex-direction: column;
         }
-
+        
         .win-screen.active {
             display: flex;
         }
-
+        
         .win-item {
             width: 200px;
             height: 200px;
             animation: winPulse 1s ease-in-out;
         }
-
+        
         @keyframes winPulse {
             0% { transform: scale(0) rotate(0deg); }
             50% { transform: scale(1.2) rotate(180deg); }
             100% { transform: scale(1) rotate(360deg); }
         }
-
+        
         .win-title {
             font-size: 32px;
             margin-top: 20px;
@@ -305,67 +309,5 @@
             <div class="user-avatar"></div>
         </div>
     </div>
-
-    <div class="live-bar">
-        <span class="live-indicator">● LIVE</span>
-        <span id="live-content">Пока никто не открывал кейсы...</span>
-    </div>
-
-    <div class="banner">
-        <h2>МОМЕНТАЛЬНЫЙ</h2>
-        <p>автоматический вывод</p>
-    </div>
-
-    <div class="section-title">БЕСПЛАТНЫЕ КЕЙСЫ</div>
-
-    <div class="cases-grid">
-        <div class="case-card" onclick="openCase('poor')">
-            <img src="images/patrick.png" alt="Нищий Патрик" class="case-image">
-            <div class="case-name">Нищий Патрик</div>
-            <div class="case-price">15 ⭐</div>
-        </div>
-    </div>
-
-    <div class="section-title">ОБЫЧНЫЕ КЕЙСЫ</div>
-
-    <div class="cases-grid">
-        <div class="case-card" onclick="openCase('npc')">
-            <img src="images/NPS.png" alt="NPC" class="case-image">
-            <div class="case-name">NPC</div>
-            <div class="case-price">1000 ⭐</div>
-        </div>
-    </div>
-
-    <nav class="bottom-nav">
-        <a href="index.html" class="nav-item active">
-            <span class="nav-icon">🎁</span>
-            <span>Кейсы</span>
-        </a>
-        <a href="games.html" class="nav-item">
-            <span class="nav-icon">🎮</span>
-            <span>Мини-игры</span>
-        </a>
-        <a href="rating.html" class="nav-item">
-            <span class="nav-icon">🏆</span>
-            <span>Рейтинг</span>
-        </a>
-        <a href="profile.html" class="nav-item">
-            <span class="nav-icon">👤</span>
-            <span>Профиль</span>
-        </a>
-    </nav>
-
-    <div class="modal" id="caseModal">
-        <div class="modal-content">
-            <h2 id="modalTitle">Открытие кейса</h2>
-            <div class="roulette" id="roulette">
-                <div class="roulette-item">❓</div>
-                <div class="roulette-item">❓</div>
-                <div class="roulette-item">❓</div>
-            </div>
-            <button class="btn-primary" id="openBtn" onclick="startRoulette()">Открыть за <span id="price">15</span> ⭐</button>
-            <button class="btn-primary" style="background: #444; margin-top: 10px;" onclick="closeModal()">Закрыть</button>
-        </div>
-    </div>
-
-    <div class="win-screen" i<response clipped><NOTE>Result is longer than **10000 characters**, will be **truncated**.</NOTE>
+    
+    <div class="
